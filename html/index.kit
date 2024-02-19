@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- @include 'styles.kit' -->
-</head>
-<body>
-    
-<!-- @include 'nav.kit' -->
-<h1>Home</h1>
-<!-- @include 'footer.kit' -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ZANA.studio</title>
+		<!-- @include 'styles.kit' -->
+	</head>
+	<body>
+		<!-- @include 'nav.kit' -->
 
-<script src="/dist/js/main.min.js"></script>
-</body>
+		<div class="wrapper">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="../dist/img/woj_sal1.jpg" alt="" />
+						<button class="more project1"><p>Więcej</p></button>
+					</div>
+					<div class="swiper-slide">
+						<img src="../dist/img/ost_sal1.jpg" alt="" />
+						<button class="more project2"><p>Więcej</p></button>
+					</div>
+					<div class="swiper-slide">
+						<img src="../dist/img/glob2.jpg" alt="" />
+						<button class="more project3"><p>Więcej</p></button>
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<section class="studio-section section-padding">
+			<div class="wrapper">
+				<h2 class="section-heading">studio</h2>
+				<div class="studio">
+					<div class="studio-info">
+						<span>ZANA.</span>studio to autorska pracownia architektury i projektowania wnętrz prowadzona przez
+						architekt Katarzynę Ziemiańską, absolwentkę Politechniki Poznańskiej.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- @include 'footer.kit' -->
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="/dist/js/swiper.min.js"></script>
+		<script src="/dist/js/main.min.js"></script>
+	</body>
 </html>

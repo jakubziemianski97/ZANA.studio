@@ -1,22 +1,123 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/dist/css/style.min.css"></head>
-<body>
-    
-<nav>
-	<a href="index.html">Home</a>
-	<a href="page.html">Podstrona</a>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ZANA.studio</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://kit.fontawesome.com/32a2bf73d9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/dist/css/style.min.css">
+	</head>
+	<body>
+		<nav class="nav">
+	<div class="nav-small">
+		<a href="portfolio.html" class="nav-small__item">portfolio</a>
+		<a href="offer.html" class="nav-small__item">usługi</a>
+		<a href="aboutMe.html" class="nav-small__item">o mnie</a>
+		<a href="contact.html" class="nav-small__item">kontakt</a>
+	</div>
+
+	<div class="nav__items">
+		<a href="index.html" class="home"><img src="../dist/img/zanaLogo.png" alt="brand logo" /></a>
+		<a href="portfolio.html" class="nav__item portfolio">portfolio</a>
+		<a href="offer.html" class="nav__item offer">usługi</a>
+		<a href="aboutMe.html" class="nav__item about-me">o mnie</a>
+		<a href="contact.html" class="nav__item contact">kontakt</a>
+		<button class="burger-btn">
+			<div class="burger-btn__box">
+				<div class="burger-btn__bars"></div>
+			</div>
+		</button>
+	</div>
+	<div class="nav-bar"></div>
 </nav>
-<h1>Home</h1>
-<footer>
-    <p>Footer</p>
+
+		<div class="wrapper">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="../dist/img/woj_sal1.jpg" alt="" />
+						<button class="more project1"><p>Więcej</p></button>
+					</div>
+					<div class="swiper-slide">
+						<img src="../dist/img/ost_sal1.jpg" alt="" />
+						<button class="more project2"><p>Więcej</p></button>
+					</div>
+					<div class="swiper-slide">
+						<img src="../dist/img/glob2.jpg" alt="" />
+						<button class="more project3"><p>Więcej</p></button>
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<section class="studio-section section-padding">
+			<div class="wrapper">
+				<h2 class="section-heading">studio</h2>
+				<div class="studio">
+					<div class="studio-info">
+						<span>ZANA.</span>studio to autorska pracownia architektury i projektowania wnętrz prowadzona przez
+						architekt Katarzynę Ziemiańską, absolwentkę Politechniki Poznańskiej.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer-section">
+	<div class="wrapper">
+		<ul class="footer-name">
+			<li class="footer-brand" >
+				<p><span>ZANA</span>.studio</p>
+			</li>
+			<li><p>architektura oraz wnętrza</p></li>
+		</ul>
+		<ul class="footer-contact">
+			<li class="footer-mail">
+				<i class="fa-solid fa-envelope"></i> &nbsp;
+				<p>zana.studio@gmail.com</p>
+			</li>
+			<li class="footer-phone">
+				<i class="fa-solid fa-phone"></i> &nbsp;
+				<p>+48 696 684 962</p>
+			</li>
+		</ul>
+		<ul class="footer-follow">
+			<li>
+				<p>zaobserwuj nas:</p>
+			</li>
+			<li class="social-media">
+				<a href="https://www.instagram.com/zana.studiodesign/?hl=pl" target="_blank"
+					><i class="fa-brands fa-instagram"></i
+				></a>
+				<a href="https://www.facebook.com/profile.php?id=61555810709095" target="_blank"
+					><i class="fa-brands fa-square-facebook"></i
+				></a>
+			</li>
+		</ul>
+		<ul class="footer-law">
+			<li>
+				<p>wszelkie prawa zastrzeżone</p>
+			</li>
+			<li>
+				<p>polityka prywatności</p>
+			</li>
+		</ul>
+		<p class="footer__bottom-text">&copy; ZANA.studio <span class="footer__year"></span></p>
+	</div>
 </footer>
 
-<script src="/dist/js/main.min.js"></script>
-</body>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="/dist/js/swiper.min.js"></script>
+		<script src="/dist/js/main.min.js"></script>
+	</body>
 </html>

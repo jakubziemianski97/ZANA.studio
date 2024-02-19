@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ZANA.studio</title>
+		<!-- @include 'styles.kit' -->
+	</head>
+	<body>
+		<!-- @include 'nav.kit' -->
+
+		<section class="contact-section section-padding">
+			<div class="wrapper">
+				<h2 class="section-heading">kontakt</h2>
+				<div class="contact">
+					<p class="contact__text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas necessitatibus perferendis saepe dolorum
+						similique aperiam animi cum at voluptate, quasi, soluta cupiditate enim asperiores laborum dolore quaerat
+						molestias! Consequatur ipsum distinctio eligendi excepturi nihil dolor laboriosam et velit nesciunt.
+						Aspernatur quam minus, veritatis perspiciatis debitis suscipit aliquid laboriosam natus rerum.
+					</p>
+					<p class="contact__text">+48 696 684 962</p>
+					<p class="contact__text">example@email.com</p>
+					<p class="contact__text">
+						Znajdź nas na:
+						<br />
+						<a href="https://www.instagram.com/zana.studiodesign/?hl=pl" target="_blank"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+						<a href="https://www.facebook.com/profile.php?id=61555810709095" target="_blank"
+							><i class="fa-brands fa-square-facebook"></i
+						></a>
+					</p>
+					<form class="contact__form">
+						<div class="contact__form-box">
+							<label for="username" class="contact__form-box-label">Imię i nazwisko:</label>
+							<input type="text" id="username" class="contact__form-box-input" placeholder="Imię i nazwisko" />
+							<p class="contact__form-box-error">Podaj imię i nazwisko</p>
+						</div>
+
+						<div class="contact__form-box">
+							<label for="email" class="contact__form-box-label">Adres e-mail:</label>
+							<input type="email" id="email" class="contact__form-box-input" placeholder="Adres e-mail"/>
+							<p class="contact__form-box-error">Nieprawidłowy adres e-mail</p>
+						</div>
+
+						<div class="contact__form-box">
+							<label for="msg" class="contact__form-box-label">Wiadomość:</label>
+							<textarea id="msg" class="contact__form-box-textarea" placeholder="Wiadomość"></textarea>
+							<p class="contact__form-box-error">Wpisz wiadomość</p>
+						</div>
+
+						<button type="submit" class="contact__form-btn send">Wyślij</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- @include 'footer.kit' -->
+		<script src="/dist/js/main.min.js"></script>
+	</body>
+</html>
