@@ -10,6 +10,26 @@ const sendBtn = document.querySelector('.send')
 const error = document.querySelector('.contact__form-box-error')
 let lastScrollY = window.scrollY
 
+document.addEventListener('DOMContentLoaded', function () {
+	const navToggle = () => {
+		if (lastScrollY < window.scrollY) {
+			nav.classList.add('hidden')
+		} else {
+			nav.classList.remove('hidden')
+		}
+		lastScrollY = window.scrollY
+	}
+	window.addEventListener('scroll', navToggle)
+
+	navBtn.addEventListener('click', handleNav)
+
+	const handleCurrentYear = () => {
+		const year = new Date().getFullYear()
+		footerYear.innerText = year + ' '
+	}
+	handleCurrentYear()
+})
+
 const handleNav = () => {
 	navSmall.classList.toggle('nav-small--active')
 
@@ -29,15 +49,6 @@ const handleNavItemsAnimation = () => {
 		delayTime++
 	})
 }
-
-window.addEventListener('scroll', () => {
-	if (lastScrollY < window.scrollY) {
-		nav.classList.add('hidden')
-	} else {
-		nav.classList.remove('hidden')
-	}
-	lastScrollY = window.scrollY
-})
 
 const showError = input => {
 	const formBox = input.parentElement
@@ -74,6 +85,16 @@ const nameLength = input => {
 	}
 }
 
+const checkMail = email => {
+	const re =
+		/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+	if (re.test(email.value)) {
+		clearError(email)
+	} else {
+		showError(email, error.textContent)
+	}
+}
+
 const msgLength = textarea => {
 	const error = textarea.parentElement.querySelector('.contact__form-box-error')
 
@@ -94,12 +115,5 @@ sendBtn.addEventListener('click', e => {
 	checkForm([username, email, msg])
 	nameLength(username)
 	msgLength(msg)
+	checkMail(email)
 })
-
-const handleCurrentYear = () => {
-	const year = new Date().getFullYear()
-	footerYear.innerText = year + ' '
-}
-
-navBtn.addEventListener('click', handleNav)
-handleCurrentYear()

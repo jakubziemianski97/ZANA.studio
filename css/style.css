@@ -85,6 +85,7 @@ body {
   position: fixed;
   z-index: 1000;
   overflow: hidden;
+  border-bottom: 2px solid rgb(22, 22, 22);
 }
 .nav__items .nav__item {
   display: flex;
@@ -160,6 +161,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 100;
+  border-bottom: 2px solid rgb(22, 22, 22);
 }
 
 @keyframes navItemsAnimation {
@@ -174,13 +176,9 @@ body {
   animation: navItemsAnimation 1s both;
 }
 
-.hidden {
-  opacity: 0;
-}
-
 .swiper {
   position: relative;
-  width: 95vw;
+  width: 100vw;
   height: 60%;
   z-index: 1;
   top: 6rem;
@@ -255,21 +253,79 @@ body {
   font-weight: 400;
 }
 
-.studio-section {
-  padding-bottom: 1rem;
-}
-.studio-section .section-heading {
-  margin: 1rem;
-}
-
-.studio {
+.intro {
   position: relative;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: justify;
 }
-.studio-info {
-  font-size: 1rem;
+.intro .section-title {
+  padding: 6rem 2rem 0 2rem;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
 }
-.studio-info span {
-  font-weight: 700;
+.intro__studio {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.intro__studio-logo {
+  width: 120px;
+  margin-left: -10px;
+}
+.intro__studio-info {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+}
+.intro-btn {
+  margin-top: 80px;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+.intro-btn a {
+  text-decoration: none;
+}
+.intro-btn a p {
+  display: inline;
+  border-bottom: 2px solid rgb(22, 22, 22);
+  padding-bottom: 5px;
+  color: rgb(22, 22, 22);
+  transition: 0.3s;
+  font-weight: lighter;
+}
+.intro-btn {
+  text-align: right;
+}
+.intro__grey {
+  display: flex;
+  margin-top: 3rem;
+  padding: 3rem 2rem;
+  flex-direction: column;
+  background-color: #d1d1d1;
+}
+.intro__grey-types {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.intro__grey-types-architecture {
+  padding: 2rem;
+}
+.intro__contact {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.intro__contact-btn {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .about-me {
@@ -337,7 +393,7 @@ body {
 }
 .contact__form-box-error {
   margin: -10px 0 20px 10px;
-  font-size: 0.8em;
+  font-size: 0.6em;
   font-weight: 300;
   color: #ea6d6d;
   visibility: hidden;
@@ -375,7 +431,7 @@ body {
 }
 .projects__box:hover .projects__box-info-title,
 .projects__box:hover .projects__box-info-type {
-  animation: scaleGrow 0.4s;
+  animation: scaleGrow 0.5s;
 }
 .projects__box-img {
   width: 100%;
@@ -395,6 +451,9 @@ body {
 }
 .projects__box-img--fourth {
   background-image: url("/dist/img/hosp_wiz1.jpg");
+}
+.projects__box-img--fifth {
+  background-color: #fff;
 }
 .projects__box-info {
   position: absolute;
@@ -442,6 +501,15 @@ body {
 .projects__box-info-btn:hover {
   scale: 0.95;
   background-color: rgb(22, 22, 22);
+}
+.projects__box .soon {
+  opacity: 1;
+  background-color: #d1d1d1;
+  color: rgb(22, 22, 22);
+}
+.projects__box .soon__comming {
+  font-size: 1.2rem;
+  margin-top: 50px;
 }
 
 .project__page-gallery {
@@ -533,6 +601,7 @@ body {
     grid-template-columns: repeat(5, 1fr);
     font-size: 1.1rem;
     padding-right: 20px;
+    border: none;
   }
   .nav__items .burger-btn {
     display: none;
@@ -559,6 +628,9 @@ body {
   .nav__items .portfolio {
     grid-column: 2/3;
   }
+  .nav-bar {
+    height: 120px;
+  }
   .swiper .swiper-slide .more {
     margin: 30px 45px;
   }
@@ -567,6 +639,20 @@ body {
   }
   .section-heading {
     font-size: 3rem;
+  }
+  .intro .section-title {
+    margin-bottom: 3rem;
+  }
+  .intro__grey-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .intro__grey-types-architecture {
+    grid-column: 1/2;
+    padding: 0;
+  }
+  .intro__grey-types-interior {
+    grid-column: 2/3;
   }
   .contact__text {
     font-size: 1.2rem;
@@ -676,6 +762,9 @@ body {
   }
   .swiper .swiper-slide p {
     font-size: 1.7rem;
+  }
+  .intro__contact-btn {
+    margin: 70px auto;
   }
   .section-heading {
     padding: 2rem 0;

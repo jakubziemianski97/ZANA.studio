@@ -47,6 +47,7 @@ body {
 	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 	background-color: $white;
 	z-index: 900;
+
 	&--active {
 		transform: translateX(0);
 	}
@@ -84,6 +85,8 @@ body {
 	position: fixed;
 	z-index: 1000;
 	overflow: hidden;
+	border-bottom: 2px solid $dark;
+
 	.nav__item {
 		// top: 0;
 		display: flex;
@@ -167,6 +170,7 @@ body {
 	position: fixed;
 	top: 0;
 	z-index: 100;
+	border-bottom: 2px solid $dark;
 }
 
 @keyframes navItemsAnimation {
@@ -181,9 +185,6 @@ body {
 	animation: navItemsAnimation 1s both;
 }
 
-.hidden {
-	opacity: 0;
-}
 // ====================
 // BODY
 // ====================
@@ -193,7 +194,7 @@ body {
 .swiper {
 	position: relative;
 	// max-width: 1200px;
-	width: 95vw;
+	width: 100vw;
 	height: 60%;
 	z-index: 1;
 	top: 6rem;
@@ -268,19 +269,79 @@ body {
 	font-weight: 400;
 }
 
-.studio-section {
-	padding-bottom: 1rem;
-	.section-heading {
-		margin: 1rem;
-	}
-}
-
-.studio {
+.intro {
 	position: relative;
-	&-info {
-		font-size: 1rem;
-		span {
-			font-weight: 700;
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-align: justify;
+
+	.section-title {
+		padding: 6rem 2rem 0 2rem;
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 600;
+	}
+	&__studio {
+		padding: 0 2rem;
+		display: flex;
+		flex-direction: column;
+		&-logo {
+			width: 120px;
+			margin-left: -10px;
+		}
+		&-info {
+			display: flex;
+			justify-content: center;
+			align-items: end;
+			flex-direction: column;
+		}
+	}
+	&-btn {
+		margin-top: 80px;
+		font-size: 1.5rem;
+		background: transparent;
+		border: none;
+		text-align: center;
+		a {
+			text-decoration: none;
+			p {
+				display: inline;
+				border-bottom: 2px solid $dark;
+				padding-bottom: 5px;
+				color: $dark;
+				transition: 0.3s;
+				font-weight: lighter;
+			}
+		}
+	}
+	&-btn {
+		text-align: right;
+	}
+	&__grey {
+		display: flex;
+		margin-top: 3rem;
+		padding: 3rem 2rem;
+		flex-direction: column;
+		background-color: $dark-grey;
+		// width: 100vw;
+		&-types {
+			text-align: center;
+			margin-bottom: 6rem;
+			&-architecture {
+				padding: 2rem;
+			}
+		}
+	}
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		padding: 3rem 2rem;
+		text-align: center;
+		&-btn {
+			text-align: center;
+			margin-top: 1rem;
 		}
 	}
 }
@@ -357,7 +418,7 @@ body {
 			}
 			&-error {
 				margin: -10px 0 20px 10px;
-				font-size: 0.8em;
+				font-size: 0.6em;
 				font-weight: 300;
 				color: $error;
 				visibility: hidden;
@@ -403,7 +464,7 @@ body {
 			}
 			.projects__box-info-title,
 			.projects__box-info-type {
-				animation: scaleGrow 0.4s;
+				animation: scaleGrow 0.5s;
 			}
 		}
 		&-img {
@@ -423,6 +484,9 @@ body {
 			}
 			&--fourth {
 				background-image: url('/dist/img/hosp_wiz1.jpg');
+			}
+			&--fifth {
+				background-color: #fff;
 			}
 		}
 		&-info {
@@ -470,6 +534,15 @@ body {
 					scale: 0.95;
 					background-color: $dark;
 				}
+			}
+		}
+		.soon {
+			opacity: 1;
+			background-color: $dark-grey;
+			color: $dark;
+			&__comming {
+				font-size: 1.2rem;
+				margin-top: 50px;
 			}
 		}
 	}
@@ -586,6 +659,7 @@ body {
 		grid-template-columns: repeat(5, 1fr);
 		font-size: 1.1rem;
 		padding-right: 20px;
+		border: none;
 		.burger-btn {
 			display: none;
 		}
@@ -613,6 +687,9 @@ body {
 			grid-column: 2 / 3;
 		}
 	}
+	.nav-bar {
+		height: 120px;
+	}
 	.swiper {
 		.swiper-slide {
 			.more {
@@ -625,6 +702,25 @@ body {
 	}
 	.section-heading {
 		font-size: 3rem;
+	}
+	.intro {
+		.section-title {
+			margin-bottom: 3rem;
+		}
+		&__grey {
+			&-types {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+
+				&-architecture {
+					grid-column: 1 / 2;
+					padding: 0;
+				}
+				&-interior {
+					grid-column: 2 / 3;
+				}
+			}
+		}
 	}
 	.contact {
 		&__text {
@@ -761,6 +857,13 @@ body {
 			}
 			p {
 				font-size: 1.7rem;
+			}
+		}
+	}
+	.intro {
+		&__contact {
+			&-btn {
+				margin: 70px auto;
 			}
 		}
 	}

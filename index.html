@@ -13,6 +13,7 @@ rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
 <script src="https://kit.fontawesome.com/32a2bf73d9.js" crossorigin="anonymous"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="/dist/css/style.min.css">
 	</head>
 	<body>
@@ -61,15 +62,46 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 			</div>
 		</div>
 
-		<section class="studio-section section-padding">
-			<div class="wrapper">
-				<h2 class="section-heading">studio</h2>
-				<div class="studio">
-					<div class="studio-info">
-						<span>ZANA.</span>studio to autorska pracownia architektury i projektowania wnętrz prowadzona przez
-						architekt Katarzynę Ziemiańską, absolwentkę Politechniki Poznańskiej.
+		<section class="intro">
+			<!-- <div class="wrapper"> -->
+				<p class="section-title">Studio projektowania pięknych przestrzeni...</p>
+				<div class="intro__studio">
+					<img class="intro__studio-logo" src="../dist/img/zanaLogo.png" alt="brand logo" />
+					<div class="intro__studio-info">
+						<p>
+							Pracownia architektury kierująca się zasadą, że podstawą do zaprojektowania pięknej przestrzeni jest
+							zachowanie równowagi pomiędzy funkcjonalnością, a estetyką. Każdy projekt tworzony jest przede wszystkim w
+							oparciu o Państwa indywidualne potrzeby. Nieszablonowe podejście oraz dbałość o najmniejsze detale
+						</p>
 					</div>
+					<button class="intro__studio-btn intro-btn">
+						<a href="aboutMe.html"><p>Dowiedz się więcej...</p></a>
+					</button>
 				</div>
+				<div class="intro__grey">
+					<div class="intro__grey-types">
+						<div class="intro__grey-types-architecture">
+							<img src="" alt="" />
+							<p>architektura</p>
+						</div>
+						<div class="intro__grey-types-interior">
+							<img src="" alt="" />
+							<p>wnętrza</p>
+						</div>
+					</div>
+					<div class="intro__grey-description">
+						<p>Projektuję dla Państwa architekturę oraz wnętrza. </p>
+					</div>
+					<button class="intro-btn">
+						<a href="../offer.html"><p>Poznaj szczegóły oferty..</p></a>
+					</button>
+				</div>
+			</div>
+			<div class="intro__contact">
+				<p>Chcesz powierzyć mi swój projekt?</p>
+				<button class="intro-btn intro__contact-btn">
+					<a href="../contact.html"><p>Napisz do mnie</p></a>
+				</button>
 			</div>
 		</section>
 
@@ -117,7 +149,9 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 </footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="/dist/js/swiper.min.js"></script>
+		<script src="/dist/js/aos.min.js"></script>
 		<script src="/dist/js/main.min.js"></script>
 	</body>
 </html>
