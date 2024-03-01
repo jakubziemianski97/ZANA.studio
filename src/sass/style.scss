@@ -297,7 +297,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		padding: 0 2rem;
-		max-width: 1200px;
+		// max-width: 1200px;
 		&-logo {
 			width: 120px;
 			margin-left: -10px;
@@ -305,16 +305,27 @@ body {
 		&-info {
 			display: flex;
 			justify-content: center;
-			align-items: end;
 			flex-direction: column;
+			&-box {
+				position: relative;
+				padding-bottom: 100px;
+			}
 		}
 	}
 	&__grey {
 		display: flex;
-		flex-direction: column;
+		justify-content: center;
 		margin-top: 3rem;
-		padding: 3rem 2rem;
+		padding: 3rem 0;
 		background-color: $light-grey;
+		&-box {
+			position: relative;
+			padding: 0 2rem 100px 2rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 1200px;
+		}
 		&-types {
 			text-align: center;
 			margin-bottom: 6rem;
@@ -772,7 +783,7 @@ hr {
 .main-btn {
 	position: relative;
 	display: inline-block;
-	margin: 80px 0 50px;
+	margin: 0 0 50px;
 	padding: 0.2em 0;
 	color: $dark;
 	background: transparent;
@@ -808,11 +819,16 @@ hr {
 	}
 
 	&-info {
-		width: 223px;
+		margin-top: 60px;
+		width: 180px;
+		position: absolute;
+		right: 0;
 	}
 	&-types {
-		margin-left: auto;
-		width: 272px;
+		margin: 50px 2rem 0 0;
+		width: 220px;
+		position: absolute;
+		right: 0;
 	}
 	&-contact {
 		margin-top: 2rem;
@@ -1094,16 +1110,34 @@ hr {
 		}
 	}
 	.intro {
+		position: relative;
 		&__studio {
-			width: 60%;
-			margin: 0 50px 0 auto;
+			display: grid;
+			margin: 0 auto;
+			grid-template-columns: 2fr 3fr;
+			grid-template-rows: 1fr 2fr;
+			// margin: 0 50px 0 auto;
+			max-width: 1200px;
+			img {
+				grid-row: 1 / 2;
+				grid-column: 2 /3;
+			}
+			&-info {
+				text-align: left;
+
+				grid-column: 2 / 3;
+				// margin-left: 0;
+				// margin-left: 40%;
+				// width: 60%;
+			}
+			// width: 60%;
 		}
 		&__grey {
 			&-description {
 				margin-left: 50px;
 			}
 			.main-btn-types {
-				margin-right: 50px;
+				// margin-right: 50px;
 				margin-left: auto;
 			}
 		}
@@ -1206,8 +1240,8 @@ hr {
 			width: 350px;
 			img {
 				display: flex;
-				justify-content: start;
-				align-items: start;
+				justify-content: flex-start;
+				align-items: flex-start;
 			}
 		}
 		&-info {
@@ -1345,11 +1379,11 @@ hr {
 	}
 	.intro {
 		&__studio {
-			margin-right: 100px;
-			width: 50%;
+			// margin-right: 100px;
+			// width: 50%;
 		}
 		&__grey {
-			padding-right: 80px;
+			// padding-right: 80px;
 		}
 	}
 	.projects {
