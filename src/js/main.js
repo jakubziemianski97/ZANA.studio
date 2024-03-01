@@ -12,13 +12,16 @@ let lastScrollY = window.scrollY
 
 document.addEventListener('DOMContentLoaded', function () {
 	const navToggle = () => {
-		if (lastScrollY < window.scrollY) {
-			nav.classList.add('hidden')
-		} else {
-			nav.classList.remove('hidden')
+		if (!navSmall.classList.contains('nav-small--active')) {
+			if (lastScrollY < window.scrollY) {
+				nav.classList.add('hidden')
+			} else {
+				nav.classList.remove('hidden')
+			}
 		}
 		lastScrollY = window.scrollY
 	}
+
 	window.addEventListener('scroll', navToggle)
 
 	navBtn.addEventListener('click', handleNav)
@@ -115,25 +118,26 @@ sendBtn.addEventListener('click', e => {
 	checkMail(email)
 })
 
-const sendForm = () => {
-	const form = document.querySelector('.contact__form')
 
-	if (!form) {
-		console.log('nie mozna znalezc rodzica')
-		return
-	}
+// const sendForm = () => {
+// 	const form = document.querySelector('.contact__form')
 
-	const formBoxes = form.children
+// 	if (!form) {
+// 		console.log('nie mozna znalezc rodzica')
+// 		return
+// 	}
 
-	for (let i = 0; i < formBoxes.length; i++) {
-		const formBox = formBoxes[i]
+// 	const formBoxes = form.children
 
-		if (formBox.classList.contains('error')) {
-			form.classList.remove('formularz')
-			return
-		}
-	}
-	form.classList.add('formularz')
-}
+// 	for (let i = 0; i < formBoxes.length; i++) {
+// 		const formBox = formBoxes[i]
 
-sendBtn.addEventListener('click', sendForm)
+// 		if (formBox.classList.contains('error')) {
+// 			form.classList.remove('formularz')
+// 			return
+// 		}
+// 	}
+// 	form.classList.add('formularz')
+// }
+
+// sendBtn.addEventListener('click', sendForm)
