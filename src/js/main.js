@@ -52,10 +52,7 @@ const handleNavItemsAnimation = () => {
 
 const showError = input => {
 	const formBox = input.parentElement
-	// const errorMsg = formBox.querySelector('.contact__form-box-error')
-
 	formBox.classList.add('error')
-	// error.textContent = message
 }
 
 const clearError = input => {
@@ -117,3 +114,26 @@ sendBtn.addEventListener('click', e => {
 	msgLength(msg)
 	checkMail(email)
 })
+
+const sendForm = () => {
+	const form = document.querySelector('.contact__form')
+
+	if (!form) {
+		console.log('nie mozna znalezc rodzica')
+		return
+	}
+
+	const formBoxes = form.children
+
+	for (let i = 0; i < formBoxes.length; i++) {
+		const formBox = formBoxes[i]
+
+		if (formBox.classList.contains('error')) {
+			form.classList.remove('formularz')
+			return
+		}
+	}
+	form.classList.add('formularz')
+}
+
+sendBtn.addEventListener('click', sendForm)
