@@ -180,7 +180,7 @@ body {
 }
 
 .swiper {
-  max-width: 1200px;
+  max-width: 1500px;
   position: relative;
   top: 6rem;
   width: 100vw;
@@ -620,24 +620,28 @@ hr {
   text-align: center;
 }
 .offer__description {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   padding: 0 2rem 2rem 2rem;
   font-size: 1.4rem;
-  text-align: justify;
+}
+.offer__architecture {
+  background-color: #f1f1f1;
 }
 .offer__architecture-steps {
-  padding: 0 2rem 2rem 2rem;
+  background-color: #ffffff;
+  padding: 1rem 2rem 2rem 2rem;
+}
+.offer__interior {
+  background-color: #f1f1f1;
 }
 .offer__interior-steps {
-  padding: 0 2rem 0 2rem;
+  background-color: #ffffff;
+  padding: 1rem 2rem 0 2rem;
 }
 
 .offer-contact {
   position: relative;
   display: block;
-  margin: 30px 0 50px;
+  margin: 50px 0 20px;
   padding: 0.2em 0;
   left: 50%;
   transform: translateX(-50%);
@@ -680,7 +684,6 @@ hr {
 }
 
 .grey {
-  background-color: #f1f1f1;
   margin: 0;
   padding: 2rem;
 }
@@ -943,6 +946,9 @@ hr {
     margin: 0.6em;
     font-size: 3rem;
   }
+  .offer__architecture-steps {
+    margin-bottom: 1rem;
+  }
   .about-me {
     padding: 0 2rem;
   }
@@ -1154,29 +1160,56 @@ hr {
     grid-row: 2/3;
     padding: 3rem 0 2rem;
   }
+  .offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .offer h3 {
     font-size: 2.5rem;
   }
-  .offer p {
-    font-size: 1.6rem;
-  }
   .offer__description {
-    width: 65%;
-    margin: 0 3rem 3rem auto;
+    position: relative;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 2fr 1fr;
+  }
+  .offer__description-text {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .offer__description-btn {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 155px;
+  }
+  .offer__description-btn p {
+    text-align: end;
   }
   .offer__architecture-steps, .offer__interior-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .offer-contact {
-    margin-bottom: 80px;
-    width: 280px;
+  .offer__architecture-steps-first, .offer__interior-steps-first {
+    padding: 0 1rem 0 0;
   }
-  .offer-contact a p {
-    font-size: 2.5rem;
+  .offer__architecture-steps-second, .offer__interior-steps-second {
+    padding: 0 1rem 0 1rem;
+  }
+  .offer__architecture-steps-third, .offer__interior-steps-third {
+    padding: 0 0 0 1rem;
+  }
+  .offer__interior-steps {
+    padding-bottom: 80px;
+  }
+  .offer-contact {
+    margin-right: auto;
+    margin-left: auto;
   }
   .offer-contact-second {
-    margin-bottom: 50px;
+    margin-left: 0;
   }
   .footer {
     grid-template-columns: repeat(4, 1fr);
@@ -1316,15 +1349,19 @@ hr {
     margin-bottom: 1rem;
     padding: 2rem 0;
   }
-  .offer p {
-    font-size: 1.2rem;
-  }
   .offer__description {
     padding: 0 3rem 3rem 3rem;
     font-size: 1.4rem;
     text-align: justify;
   }
+  .offer__architecture, .offer__interior {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .offer__architecture-info, .offer__interior-info {
+    max-width: 1200px;
     padding: 0 3rem 3rem 3rem;
   }
   .offer__architecture-steps, .offer__interior-steps {
@@ -1338,12 +1375,6 @@ hr {
   }
   .offer__architecture-steps-third, .offer__interior-steps-third {
     padding-left: 3rem;
-  }
-  .offer-contact {
-    width: 200px;
-  }
-  .offer-contact a p {
-    font-size: 1.7rem;
   }
   .main-btn-send {
     font-size: 2rem;

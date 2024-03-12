@@ -59,22 +59,22 @@
 							><i class="fa-brands fa-square-facebook"></i
 						></a>
 					</p>
-					<form class="contact__form" data-aos="fade-up" data-aos-delay="250">
+					<form action="mail.php" method="post" class="contact__form" data-aos="fade-up" data-aos-delay="250">
 						<div class="contact__form-box">
 							<label for="username" class="contact__form-box-label">Imię i nazwisko:</label>
-							<input type="text" id="username" class="contact__form-box-input" placeholder="Imię i nazwisko" />
+							<input type="text" id="username" name="username" class="contact__form-box-input" placeholder="Imię i nazwisko" />
 							<p class="contact__form-box-error">Podaj imię i nazwisko</p>
 						</div>
 
 						<div class="contact__form-box">
 							<label for="email" class="contact__form-box-label">Adres e-mail:</label>
-							<input type="email" id="email" class="contact__form-box-input" placeholder="Adres e-mail" />
+							<input type="email" id="email" name="email" class="contact__form-box-input" placeholder="Adres e-mail" />
 							<p class="contact__form-box-error">Nieprawidłowy adres e-mail</p>
 						</div>
 
 						<div class="contact__form-box">
 							<label for="msg" class="contact__form-box-label">Wiadomość:</label>
-							<textarea id="msg" class="contact__form-box-textarea" placeholder="Wiadomość"></textarea>
+							<textarea id="msg" name="msg" class="contact__form-box-textarea" placeholder="Wiadomość"></textarea>
 							<p class="contact__form-box-error">Wpisz wiadomość</p>
 						</div>
 

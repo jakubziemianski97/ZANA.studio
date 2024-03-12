@@ -118,26 +118,25 @@ sendBtn.addEventListener('click', e => {
 	checkMail(email)
 })
 
+const formBoxes = document.querySelectorAll('.contact__form-box')
 
-// const sendForm = () => {
-// 	const form = document.querySelector('.contact__form')
+sendBtn.addEventListener('click', e => {
+	e.preventDefault()
+	checkFormBoxes()
+})
 
-// 	if (!form) {
-// 		console.log('nie mozna znalezc rodzica')
-// 		return
-// 	}
+function checkFormBoxes() {
+	let hasError = false
 
-// 	const formBoxes = form.children
+	formBoxes.forEach(formBox => {
+		if (formBox.classList.contains('error')) {
+			hasError = true
+		}
+	})
 
-// 	for (let i = 0; i < formBoxes.length; i++) {
-// 		const formBox = formBoxes[i]
-
-// 		if (formBox.classList.contains('error')) {
-// 			form.classList.remove('formularz')
-// 			return
-// 		}
-// 	}
-// 	form.classList.add('formularz')
-// }
-
-// sendBtn.addEventListener('click', sendForm)
+	if (hasError) {
+		console.log('Formularz zawiera błędy')
+	} else {
+		window.location.href = '/thanks.html'
+	}
+}

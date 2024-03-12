@@ -189,7 +189,7 @@ body {
 // MAIN
 
 .swiper {
-	max-width: 1200px;
+	max-width: 1500px;
 	position: relative;
 	top: 6rem;
 	width: 100vw;
@@ -644,28 +644,33 @@ hr {
 		text-align: center;
 	}
 	&__description {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
+		// // max-width: 1200px;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: flex-end;
 		padding: 0 2rem 2rem 2rem;
 		font-size: 1.4rem;
-		text-align: justify;
+		// text-align: justify;
 	}
 	&__architecture {
+		background-color: $light-grey;
 		&-steps {
-			padding: 0 2rem 2rem 2rem;
+			background-color: $white;
+			padding: 1rem 2rem 2rem 2rem;
 		}
 	}
 	&__interior {
+		background-color: $light-grey;
 		&-steps {
-			padding: 0 2rem 0 2rem;
+			background-color: $white;
+			padding: 1rem 2rem 0 2rem;
 		}
 	}
 }
 .offer-contact {
 	position: relative;
 	display: block;
-	margin: 30px 0 50px;
+	margin: 50px 0 20px;
 	padding: 0.2em 0;
 	left: 50%;
 	transform: translateX(-50%);
@@ -708,7 +713,6 @@ hr {
 }
 
 .grey {
-	background-color: $light-grey;
 	margin: 0;
 	padding: 2rem;
 }
@@ -1013,6 +1017,14 @@ hr {
 			}
 		}
 	}
+	.offer {
+		&__architecture {
+			&-steps {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
 	.about-me {
 		padding: 0 2rem;
 		&-studio {
@@ -1251,34 +1263,60 @@ hr {
 		}
 	}
 	.offer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		h3 {
 			font-size: 2.5rem;
 		}
-		p {
-			font-size: 1.6rem;
-		}
+
 		&__description {
-			width: 65%;
-			margin: 0 3rem 3rem auto;
+			position: relative;
+			max-width: 1200px;
+			display: grid;
+			grid-template-columns: 2fr 3fr;
+			grid-template-rows: 2fr 1fr;
+			&-text {
+				grid-column: 2 / 3;
+				grid-row: 1 / 2;
+			}
+			&-btn {
+				grid-column: 2 / 3;
+				grid-row: 2 / 3;
+				width: 155px;
+				p {
+					text-align: end;
+				}
+			}
 		}
 		&__architecture,
 		&__interior {
 			&-steps {
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
+				&-first {
+					padding: 0 1rem 0 0;
+				}
+				&-second {
+					padding: 0 1rem 0 1rem;
+				}
+				&-third {
+					padding: 0 0 0 1rem;
+				}
+			}
+		}
+		&__interior {
+			&-steps {
+				padding-bottom: 80px;
 			}
 		}
 	}
 	.offer-contact {
-		margin-bottom: 80px;
-		width: 280px;
-		a {
-			p {
-				font-size: 2.5rem;
-			}
-		}
+		margin-right: auto;
+		margin-left: auto;
 		&-second {
-			margin-bottom: 50px;
+			margin-left: 0;
 		}
 	}
 
@@ -1377,15 +1415,7 @@ hr {
 			}
 		}
 	}
-	.intro {
-		&__studio {
-			// margin-right: 100px;
-			// width: 50%;
-		}
-		&__grey {
-			// padding-right: 80px;
-		}
-	}
+
 	.projects {
 		justify-content: flex-start;
 		margin: 0;
@@ -1441,9 +1471,7 @@ hr {
 			margin-bottom: 1rem;
 			padding: 2rem 0;
 		}
-		p {
-			font-size: 1.2rem;
-		}
+
 		&__description {
 			padding: 0 3rem 3rem 3rem;
 			font-size: 1.4rem;
@@ -1451,7 +1479,12 @@ hr {
 		}
 		&__architecture,
 		&__interior {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			&-info {
+				max-width: 1200px;
 				padding: 0 3rem 3rem 3rem;
 			}
 			&-steps {
@@ -1469,15 +1502,6 @@ hr {
 		}
 	}
 
-	.offer-contact {
-		// transform: translateX(-140%);
-		width: 200px;
-		a {
-			p {
-				font-size: 1.7rem;
-			}
-		}
-	}
 	.main-btn {
 		&-send {
 			font-size: 2rem;
