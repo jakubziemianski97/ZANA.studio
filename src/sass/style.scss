@@ -283,7 +283,9 @@ body {
 	font-size: 1rem;
 	font-weight: 300;
 	text-align: justify;
-
+	h3 {
+		font-weight: 300;
+	}
 	.section-title {
 		display: flex;
 		justify-content: center;
@@ -297,7 +299,6 @@ body {
 		display: flex;
 		flex-direction: column;
 		padding: 0 2rem;
-		// max-width: 1200px;
 		&-logo {
 			width: 120px;
 			margin-left: -10px;
@@ -329,6 +330,7 @@ body {
 		&-types {
 			text-align: center;
 			margin-bottom: 6rem;
+
 			&-architecture {
 				padding: 2rem 0 4rem;
 				&-icon {
